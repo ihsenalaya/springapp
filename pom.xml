@@ -17,6 +17,12 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+             <dependency>
+                 <groupId>com.microsoft.sqlserver</groupId>
+                      <artifactId>mssql-jdbc</artifactId>
+                      <version>9.4.0.jre17-preview</version>
+                  </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -69,5 +75,16 @@
             </plugin>
         </plugins>
     </build>
-
+<repositories>
+    <repository>
+        <id>microsoft-azure-sql</id>
+        <url>https://maven.microsoft.com/artifactory/mssql-jdbc</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
 </project>
